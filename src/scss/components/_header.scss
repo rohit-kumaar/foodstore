@@ -1,0 +1,46 @@
+header {
+  nav {
+    height: 5rem;
+    padding: 1rem;
+    @extend %flexBetween;
+    box-shadow: 0 0 rem(10) rgba($black, 0.229);
+    background-color: $white;
+
+    @include tablet {
+      padding: 2rem;
+    }
+
+    > div {
+      @extend %flexCenter;
+
+      > svg {
+        color: $red;
+        font-size: 3rem;
+      }
+
+      > a {
+        margin: 0 0.5rem;
+        color: $dark;
+        transition: color 0.3s;
+
+        @include tablet {
+          margin: 0 2rem;
+        }
+
+        &:hover {
+          color: $lightdark;
+        }
+
+        > svg {
+          color: $red;
+          transform: inherit;
+          font-size: 1.5rem;
+
+          &:hover {
+            color: $lightdark;
+          }
+        }
+      }
+    }
+  }
+}
