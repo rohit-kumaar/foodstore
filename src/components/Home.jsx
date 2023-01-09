@@ -1,7 +1,8 @@
 import { useTitle } from "hooks/useTitle";
 import React from "react";
-import Header from "./Header";
+import Header from "layouts/Header";
 import { motion } from "framer-motion";
+import Founder from "./Founder";
 
 function Home() {
   useTitle("Home");
@@ -43,6 +44,8 @@ function Home() {
           Explore Menu
         </motion.a>
       </section>
+
+      <Founder />
     </>
   );
 }

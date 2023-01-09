@@ -3,6 +3,7 @@
 html {
   box-sizing: border-box;
   font-size: $fs-16;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -38,10 +39,4 @@ blockquote {
 
 a {
   text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  width: auto;
-  height: auto;
 }
