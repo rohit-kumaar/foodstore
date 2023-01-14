@@ -1,16 +1,17 @@
 .founder {
   @extend %flexCenter;
   width: 100%;
-  height: 80vh;
-  background-color: $red;
+  height: 500px;
+  background-color: $primary;
+  padding: 16px;
 
   > div {
     color: $white;
     text-align: center;
 
     > img {
-      width: 300px;
-      height: 300px;
+      width: 284px;
+      height: 284px;
       object-fit: cover;
       border-radius: 50%;
     }
@@ -20,7 +21,6 @@
     }
 
     > p {
-      padding-inline: 1rem;
       font-size: 0.8rem;
       font-family: cursive;
       letter-spacing: 3px;

@@ -15,7 +15,7 @@
     z-index: -1;
     width: 100%;
     height: inherit;
-    background-image: url(#{$images-path}/foodtato.jpg);
+    background-image: url(#{$landing-page-images-path}/foodtato.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -40,14 +40,7 @@
   }
 
   > a {
-    display: block;
-    width: 10rem;
-    padding: 1rem;
-    border-radius: 10px;
     margin-block: 2rem;
-    background-color: $red;
-    color: $white;
-    text-align: center;
 
     @include mobile {
       margin-inline: 8rem;

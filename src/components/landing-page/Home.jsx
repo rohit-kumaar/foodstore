@@ -3,6 +3,7 @@ import React from "react";
 import Header from "layouts/Header";
 import { motion } from "framer-motion";
 import Founder from "./Founder";
+import Menu from "./Menu";
 
 function Home() {
   useTitle("Home");
@@ -40,12 +41,14 @@ function Home() {
           initial={{ y: "-100%", opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4 }}
+          className="btn"
         >
           Explore Menu
         </motion.a>
       </section>
 
       <Founder />
+      <Menu />
     </>
   );
 }

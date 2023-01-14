@@ -18,7 +18,7 @@ function Founder() {
     <>
       <section className="founder">
         <motion.div {...animation}>
-          <img src={me} alt="Rohit Kumar" title="Rohit Kumar"  />
+          <img src={me} alt="Rohit Kumar" title="Rohit Kumar" />
           <h3>Rohit Kumar</h3>
           <p>
             Hey, Everyone I am Rohit Kumar, the founder of Foodtato.

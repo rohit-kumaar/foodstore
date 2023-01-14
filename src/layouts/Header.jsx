@@ -1,5 +1,5 @@
 import React from "react";
-import { IoFastFoodOutline } from "react-icons/io5";
+import { GiFoodTruck } from "react-icons/gi";
 import { FiShoppingCart, FiLogIn } from "react-icons/fi";
 import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -10,7 +10,7 @@ function Header({ isAuthenticated = false }) {
     <header>
       <nav>
         <motion.div initial={{ x: "-100%" }} whileInView={{ x: 0 }}>
-          <IoFastFoodOutline />
+          <GiFoodTruck />
         </motion.div>
 
         <div>
