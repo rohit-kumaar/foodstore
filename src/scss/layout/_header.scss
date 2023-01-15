@@ -1,8 +1,8 @@
 header {
+  box-shadow: 0 0 rem(10) rgba($black, 0.229);
   nav {
     height: 5rem;
     @extend %flexBetween;
-    box-shadow: 0 0 rem(10) rgba($black, 0.229);
     background-color: $white;
 
     @include tablet {

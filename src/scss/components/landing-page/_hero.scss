@@ -21,29 +21,28 @@
   }
 
   div {
+    @extend %flexCenter;
+    flex-direction: column;
+
     @include mobile {
-      padding-left: 8rem;
+      display: table;
     }
 
     > h1 {
-      font-size: 3rem;
+      font-size: rem(48);
       text-transform: uppercase;
 
       @include mobile {
-        font-size: 4rem;
+        font-size: rem(64);
       }
     }
 
     > p {
-      font-size: 1.2rem;
+      font-size: rem(20);
     }
-  }
 
-  > a {
-    margin-block: 2rem;
-
-    @include mobile {
-      margin-inline: 8rem;
+    > a {
+      margin-block: 32px;
     }
   }
 }
