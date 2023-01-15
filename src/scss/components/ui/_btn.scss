@@ -4,4 +4,8 @@
   border-radius: 5px;
   background-color: $primary;
   color: $white;
+
+  &:hover {
+    background-color: $darkred;
+  }
 }

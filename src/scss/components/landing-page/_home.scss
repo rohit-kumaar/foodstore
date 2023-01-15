@@ -45,9 +45,5 @@
     @include mobile {
       margin-inline: 8rem;
     }
-
-    &:hover {
-      background-color: $darkred;
-    }
   }
 }

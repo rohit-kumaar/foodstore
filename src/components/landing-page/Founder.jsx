@@ -1,17 +1,7 @@
 import React from "react";
 import me from "assets/rohit.jpeg";
 import { motion } from "framer-motion";
-
-const animation = {
-  initial: {
-    x: "-100%",
-    opacity: 0,
-  },
-  whileInView: {
-    x: 0,
-    opacity: 1,
-  },
-};
+import { animation } from "components/ui/animation";
 
 function Founder() {
   return (

@@ -4,12 +4,13 @@ import { FiShoppingCart, FiLogIn } from "react-icons/fi";
 import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { animation } from "components/ui/animation";
 
 function Header({ isAuthenticated = false }) {
   return (
     <header>
       <nav>
-        <motion.div initial={{ x: "-100%" }} whileInView={{ x: 0 }}>
+        <motion.div {...animation}>
           <GiFoodTruck />
         </motion.div>
 
