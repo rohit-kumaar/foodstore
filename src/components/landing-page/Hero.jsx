@@ -6,7 +6,7 @@ function Hero() {
   return (
     <section className="hero">
       <div>
-        <motion.h1 {...animation}>Foodtato</motion.h1>
+        <motion.h1 {...animation}>FoodSTORE</motion.h1>
         <motion.p
           {...animation}
           transition={{

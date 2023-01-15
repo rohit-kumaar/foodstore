@@ -1,11 +1,11 @@
 import "./App.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "components/landing-page/LandingPage";
+import LandingPage from "components/landing-page/LandingPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <LandingPage />,
   },
 ]);
 

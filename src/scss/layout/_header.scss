@@ -1,7 +1,6 @@
 header {
   nav {
     height: 5rem;
-    padding: 1rem;
     @extend %flexBetween;
     box-shadow: 0 0 rem(10) rgba($black, 0.229);
     background-color: $white;
