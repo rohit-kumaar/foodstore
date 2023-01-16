@@ -165,6 +165,7 @@
       }
 
       a {
+        border-radius: 50px;
         // @extend %flexCenter;
         // width: 20px;
         // height: 20px;
@@ -180,15 +181,15 @@
 
         > svg {
           font-size: rem(22);
-          //   background-color: $white;
+          // background-color: $white;
           border-radius: 50%;
         }
 
         &:nth-child(1) {
-          //   &:hover {
-          //     background: #1877f2;
-          //     color: $white;
-          //   }
+          &:hover {
+            // background: #1877f2;
+            // color: #1877f2;
+          }
         }
         &:nth-child(2) {
           margin-inline: 10px;
