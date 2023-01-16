@@ -1,10 +1,10 @@
 import { useTitle } from "hooks/useTitle";
 import React from "react";
 import Header from "layouts/Header";
-import Founder from "./Founder";
-import Menu from "./Menu";
+import Founder from "../components/Founder";
+import Menu from "../components/Menu";
 import Footer from "layouts/Footer";
-import Hero from "./Hero";
+import Hero from "../components/Hero";
 
 function Home() {
   useTitle("Home");
