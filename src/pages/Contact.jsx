@@ -34,6 +34,7 @@ function Contact() {
     selectOption: "",
     radioOption: "",
     checkboxOption: [],
+    birthDate: null,
   };
 
   const validationSchema = Yup.object({
@@ -42,9 +43,13 @@ function Contact() {
     selectOption: Yup.string().required("Required"),
     radioOption: Yup.string().required("Required"),
     checkboxOption: Yup.array().required("Required"),
+    birthDate: Yup.date().required("Required").nullable(),
   });
 
-  const onSubmit = (value) => console.log("Form data", value);
+  const onSubmit = (value) => {
+    console.log("Form data", value);
+    console.log("Saved data", JSON.parse(JSON.stringify(value)));
+  };
 
   return (
     <>
@@ -91,6 +96,12 @@ function Contact() {
                 label="Checkbox topic"
                 name="checkboxOption"
                 options={checkboxOptions}
+              />
+
+              <FormikControl
+                control="date"
+                label="Pick a date"
+                name="birthDate"
               />
 
               <button
