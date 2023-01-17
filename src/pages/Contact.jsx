@@ -16,16 +16,35 @@ function Contact() {
     { key: "Option 4", value: "option 4" },
   ];
 
+  const radioOptions = [
+    {
+      key: "Option 1",
+      value: "rOption 1",
+    },
+    {
+      key: "Option 2",
+      value: "rOption 2",
+    },
+    {
+      key: "Option 3",
+      value: "rOption 3",
+    },
+  ];
+
   const initialValue = {
     email: "",
     description: "",
     selectOption: "",
+    radioOption: "",
   };
+
   const validationSchema = Yup.object({
     email: Yup.string().required("Required"),
     description: Yup.string().required("Required"),
     selectOption: Yup.string().required("Required"),
+    radioOption: Yup.string().required("Required"),
   });
+
   const onSubmit = (value) => console.log("Form data", value);
 
   return (
@@ -59,6 +78,13 @@ function Contact() {
                 label="Select a topic"
                 name="selectOption"
                 options={dropdownOptions}
+              />
+
+              <FormikControl
+                control="radio"
+                label="Radio Topic"
+                name="radioOption"
+                options={radioOptions}
               />
 
               <button type="submit" className="btn mt-3">

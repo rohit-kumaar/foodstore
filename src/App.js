@@ -1,3 +1,4 @@
+import "../node_modules/bootstrap/scss/bootstrap.scss";
 import "./App.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LandingPage from "pages/LandingPage";
