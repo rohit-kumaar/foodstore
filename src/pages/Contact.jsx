@@ -67,6 +67,7 @@ function Contact() {
             x: 0,
             opacity: 1,
           }}
+          transition={{ delay: 0.2 }}
         >
           <Formik
             initialValues={initialValue}
