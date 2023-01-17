@@ -12,7 +12,6 @@ function FormSelect(props) {
         id={name}
         name={name}
         {...rest}
-        className="form-select"
       >
         {options.map((option) => {
           return (
