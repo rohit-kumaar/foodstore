@@ -20,7 +20,9 @@ function RadioButton(props) {
                   checked={field.value === option.value}
                 />
 
-                <label htmlFor={option.value}>{option.key}</label>
+                <label htmlFor={option.value} className="ms-2">
+                  {option.key}
+                </label>
               </React.Fragment>
             );
           });

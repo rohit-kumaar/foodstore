@@ -30,7 +30,6 @@
 
     > h1 {
       font-size: rem(48);
-      text-transform: uppercase;
 
       @include mobile {
         font-size: rem(64);

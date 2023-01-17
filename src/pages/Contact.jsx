@@ -4,6 +4,7 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import FormikControl from "components/form/FormikControl";
 import { useTitle } from "hooks/useTitle";
+import { motion } from "framer-motion";
 
 function Contact() {
   useTitle("Contact Us");
@@ -17,9 +18,9 @@ function Contact() {
   ];
 
   const radioOptions = [
-    { key: "Option 1", value: "rOption 1" },
-    { key: "Option 2", value: "rOption 2" },
-    { key: "Option 3", value: "rOption 3" },
+    { key: "Male", value: "rMale" },
+    { key: "Female", value: "rFemale" },
+    { key: "Other", value: "rOther" },
   ];
 
   const checkboxOptions = [
@@ -56,64 +57,76 @@ function Contact() {
       <Header />
 
       <div className="container">
-        <Formik
+        <motion.div
           className="contact"
-          initialValues={initialValue}
-          validationSchema={validationSchema}
-          onSubmit={onSubmit}
+          initial={{
+            x: "-100vw",
+            opacity: 0,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+          }}
         >
-          {(formik) => (
-            <Form>
-              <FormikControl
-                control="input"
-                type="email"
-                label="Email"
-                name="email"
-              />
+          <Formik
+            initialValues={initialValue}
+            validationSchema={validationSchema}
+            onSubmit={onSubmit}
+          >
+            {(formik) => (
+              <Form>
+                <h1>Contact Us</h1>
+                <FormikControl
+                  control="input"
+                  type="email"
+                  label="Email"
+                  name="email"
+                />
 
-              <FormikControl
-                control="textarea"
-                label="Description"
-                name="description"
-              />
+                <FormikControl
+                  control="textarea"
+                  label="Description"
+                  name="description"
+                />
 
-              <FormikControl
-                control="select"
-                label="Select a topic"
-                name="selectOption"
-                options={dropdownOptions}
-              />
+                <FormikControl
+                  control="select"
+                  label="Select a topic"
+                  name="selectOption"
+                  options={dropdownOptions}
+                />
 
-              <FormikControl
-                control="radio"
-                label="Radio Topic"
-                name="radioOption"
-                options={radioOptions}
-              />
+                <FormikControl
+                  control="radio"
+                  label="Gender"
+                  name="radioOption"
+                  options={radioOptions}
+                />
 
-              <FormikControl
-                control="checkbox"
-                label="Checkbox topic"
-                name="checkboxOption"
-                options={checkboxOptions}
-              />
+                <FormikControl
+                  control="checkbox"
+                  label="Checkbox Topic"
+                  name="checkboxOption"
+                  options={checkboxOptions}
+                />
 
-              <FormikControl
-                control="date"
-                label="Pick a date"
-                name="birthDate"
-              />
+                <FormikControl
+                  control="date"
+                  label="Pick a date"
+                  name="birthDate"
+                />
 
-              <button
-                type="submit"
-                className="btn mt-3"
-                disabled={!formik.isValid}
-              >
-                Submit
-              </button>
-            </Form>
-          )}
-        </Formik>
+                <button
+                  type="submit"
+                  className="btn"
+                  disabled={!formik.isValid}
+                >
+                  Submit
+                </button>
+              </Form>
+            )}
+          </Formik>
+        </motion.div>
       </div>
     </>
   );
