@@ -17,18 +17,15 @@ function Contact() {
   ];
 
   const radioOptions = [
-    {
-      key: "Option 1",
-      value: "rOption 1",
-    },
-    {
-      key: "Option 2",
-      value: "rOption 2",
-    },
-    {
-      key: "Option 3",
-      value: "rOption 3",
-    },
+    { key: "Option 1", value: "rOption 1" },
+    { key: "Option 2", value: "rOption 2" },
+    { key: "Option 3", value: "rOption 3" },
+  ];
+
+  const checkboxOptions = [
+    { key: "Option 1", value: "cOption 1" },
+    { key: "Option 2", value: "cOption 2" },
+    { key: "Option 3", value: "cOption 3" },
   ];
 
   const initialValue = {
@@ -36,13 +33,15 @@ function Contact() {
     description: "",
     selectOption: "",
     radioOption: "",
+    checkboxOption: [],
   };
 
   const validationSchema = Yup.object({
-    email: Yup.string().required("Required"),
+    email: Yup.string().email("Invalid email formate").required("Required"),
     description: Yup.string().required("Required"),
     selectOption: Yup.string().required("Required"),
     radioOption: Yup.string().required("Required"),
+    checkboxOption: Yup.array().required("Required"),
   });
 
   const onSubmit = (value) => console.log("Form data", value);
@@ -87,7 +86,18 @@ function Contact() {
                 options={radioOptions}
               />
 
-              <button type="submit" className="btn mt-3">
+              <FormikControl
+                control="checkbox"
+                label="Checkbox topic"
+                name="checkboxOption"
+                options={checkboxOptions}
+              />
+
+              <button
+                type="submit"
+                className="btn mt-3"
+                disabled={!formik.isValid}
+              >
                 Submit
               </button>
             </Form>
