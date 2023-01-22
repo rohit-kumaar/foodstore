@@ -8,7 +8,7 @@ import { animation } from "components/ui/animation";
 
 function Header({ isAuthenticated = false }) {
   return (
-    <header>
+    <header className="bg-white">
       <nav className="container">
         <motion.div {...animation}>
           <GiFoodTruck />

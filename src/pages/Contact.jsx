@@ -7,7 +7,7 @@ import { useTitle } from "hooks/useTitle";
 import { motion } from "framer-motion";
 
 function Contact() {
-  useTitle("Contact Us");
+  useTitle("FoodStore | Contact Us");
 
   const dropdownOptions = [
     { key: "Select an option", value: "" },
@@ -56,79 +56,81 @@ function Contact() {
     <>
       <Header />
 
-      <div className="container">
-        <motion.div
-          className="contact"
-          initial={{
-            x: "-100vw",
-            opacity: 0,
-          }}
-          animate={{
-            x: 0,
-            opacity: 1,
-          }}
-          transition={{ delay: 0.2 }}
-        >
-          <Formik
-            initialValues={initialValue}
-            validationSchema={validationSchema}
-            onSubmit={onSubmit}
+      <main className="bg-primary overflow-auto">
+        <div className="container">
+          <motion.section
+            className="contact"
+            initial={{
+              x: "-100vw",
+              opacity: 0,
+            }}
+            animate={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{ delay: 0.2 }}
           >
-            {(formik) => (
-              <Form>
-                <h1>Contact Us</h1>
-                <FormikControl
-                  control="input"
-                  type="email"
-                  label="Email"
-                  name="email"
-                />
+            <Formik
+              initialValues={initialValue}
+              validationSchema={validationSchema}
+              onSubmit={onSubmit}
+            >
+              {(formik) => (
+                <Form>
+                  <h1>Contact us</h1>
+                  <FormikControl
+                    control="input"
+                    type="email"
+                    label="Email"
+                    name="email"
+                  />
 
-                <FormikControl
-                  control="textarea"
-                  label="Description"
-                  name="description"
-                />
+                  <FormikControl
+                    control="textarea"
+                    label="Description"
+                    name="description"
+                  />
 
-                <FormikControl
-                  control="select"
-                  label="Select a topic"
-                  name="selectOption"
-                  options={dropdownOptions}
-                />
+                  <FormikControl
+                    control="select"
+                    label="Select a topic"
+                    name="selectOption"
+                    options={dropdownOptions}
+                  />
 
-                <FormikControl
-                  control="radio"
-                  label="Gender"
-                  name="radioOption"
-                  options={radioOptions}
-                />
+                  <FormikControl
+                    control="radio"
+                    label="Gender"
+                    name="radioOption"
+                    options={radioOptions}
+                  />
 
-                <FormikControl
-                  control="checkbox"
-                  label="Checkbox Topic"
-                  name="checkboxOption"
-                  options={checkboxOptions}
-                />
+                  <FormikControl
+                    control="checkbox"
+                    label="Checkbox Topic"
+                    name="checkboxOption"
+                    options={checkboxOptions}
+                  />
 
-                <FormikControl
-                  control="date"
-                  label="Pick a date"
-                  name="birthDate"
-                />
+                  <FormikControl
+                    control="date"
+                    label="Pick a date"
+                    name="birthDate"
+                  />
 
-                <button
-                  type="submit"
-                  className="btn"
-                  disabled={!formik.isValid}
-                >
-                  Submit
-                </button>
-              </Form>
-            )}
-          </Formik>
-        </motion.div>
-      </div>
+                  <button
+                    type="submit"
+                    className="btn"
+                    disabled={!formik.isValid}
+                  >
+                    Submit
+                  </button>
+                </Form>
+              )}
+            </Formik>
+          </motion.section>
+        </div>
+      </main>
     </>
   );
 }

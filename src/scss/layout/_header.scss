@@ -1,5 +1,8 @@
 header {
-  box-shadow: 0 0 rem(10) rgba($black, 0.229);
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  box-shadow: 0 0 rem(10) rgba($black, 0.23);
   nav {
     height: 5rem;
     @extend %flexBetween;

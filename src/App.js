@@ -1,8 +1,9 @@
-import "../node_modules/bootstrap/scss/bootstrap.scss";
+// import "../node_modules/bootstrap/scss/bootstrap.scss";
 import "./App.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LandingPage from "pages/LandingPage";
 import Contact from "pages/Contact";
+import Cart from "pages/Cart";
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />,
+  },
+  {
+    path: "/cart",
+    element: <Cart />,
   },
 ]);
 

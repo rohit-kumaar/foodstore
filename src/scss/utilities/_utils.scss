@@ -9,3 +9,22 @@
   border: 0.1rem solid blue; // DELETE
 }
 // =============== DELETE ================
+
+/* ------------------- */
+/* Colors Start        */
+/* ------------------- */
+$colors: (
+  "primary": $primary,
+);
+
+@each $color, $value in $colors {
+  .bg-#{$color} {
+    background-color: $value !important;
+  }
+}
+
+@each $color, $value in $colors {
+  .text-#{$color} {
+    color: $value;
+  }
+}

@@ -7,14 +7,18 @@ import Footer from "layouts/Footer";
 import Hero from "../components/Hero";
 
 function Home() {
-  useTitle("Home");
+  useTitle("FoodStore | Home");
 
   return (
     <>
       <Header />
-      <Hero />
-      <Founder />
-      <Menu />
+
+      <main>
+        <Hero />
+        <Founder />
+        <Menu />
+      </main>
+
       <Footer />
     </>
   );
