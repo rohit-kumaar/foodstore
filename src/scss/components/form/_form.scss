@@ -1,3 +1,43 @@
+.contact,
+.shipping {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background: $primary;
+  margin-block: 30px;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 30px 15px;
+    border-radius: 10px;
+    background: $primary;
+    color: $white;
+    box-shadow: 20px 20px 60px #850033, -20px -20px 60px #b30045;
+
+    @include media-breakpoint-up(lg) {
+      width: 460px;
+      padding: 30px;
+    }
+
+    > h1 {
+      text-align: center;
+    }
+
+    > button {
+      background-color: $white;
+      color: $primary;
+      margin-top: 20px;
+    }
+  }
+}
+
 label {
   font-weight: bold;
   display: flex;
@@ -13,6 +53,7 @@ input + label {
 input[type="text"],
 input[type="email"],
 input[type="password"],
+input[type="number"],
 textarea,
 select {
   display: block;
