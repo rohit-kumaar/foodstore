@@ -5,6 +5,7 @@ import LandingPage from "pages/LandingPage";
 import Contact from "pages/Contact";
 import Cart from "pages/Cart";
 import Shipping from "components/Shipping";
+import ConfirmOrder from "pages/ConfirmOrder";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/shipping",
     element: <Shipping />,
+  },
+  {
+    path: "/confirm-order",
+    element: <ConfirmOrder />,
   },
 ]);
 
