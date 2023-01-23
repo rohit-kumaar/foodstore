@@ -20,7 +20,8 @@
     border-radius: 10px;
     background: $primary;
     color: $white;
-    box-shadow: 20px 20px 60px #850033, -20px -20px 60px #b30045;
+    box-shadow: 20px 20px 60px hsl(337, 100%, 26%),
+      -20px -20px 60px hsl(337, 100%, 35%);
 
     @include media-breakpoint-up(lg) {
       width: 460px;
@@ -40,8 +41,8 @@
 }
 
 label {
-  font-weight: bold;
   display: flex;
+  font-weight: bold;
   margin-bottom: 5px;
 }
 

@@ -6,6 +6,7 @@ import Contact from "pages/Contact";
 import Cart from "pages/Cart";
 import Shipping from "components/Shipping";
 import ConfirmOrder from "pages/ConfirmOrder";
+import PaymentSuccess from "pages/PaymentSuccess";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/confirm-order",
     element: <ConfirmOrder />,
+  },
+  {
+    path: "/payment-success",
+    element: <PaymentSuccess />,
   },
 ]);
 

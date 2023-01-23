@@ -6,6 +6,10 @@
   color: $white;
 
   &:hover {
-    background-color: $secondary;
+    background-color: $white;
+    color: $primary;
+    border: 1px solid $primary;
   }
+
+ 
 }
