@@ -10,15 +10,19 @@
     min-height: 50%;
     padding: 30px;
     border-radius: 10px;
-    background: #ffffff;
-    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+    background: $white;
+    box-shadow: 20px 20px 60px hsl(0, 0%, 85%), -20px -20px 60px $white;
 
     @include laptop {
       width: 50%;
     }
 
     > h1 {
-      background-image: linear-gradient(90deg, red, blue);
+      background-image: linear-gradient(
+        90deg,
+        hsl(0, 100%, 50%),
+        hsl(240, 100%, 50%)
+      );
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;

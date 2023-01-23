@@ -1,0 +1,14 @@
+.login {
+  background: rgb(36, 0, 9);
+  background: linear-gradient(
+    90deg,
+    rgba(36, 0, 9, 1) 20%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  
+  &__content {
+    height: calc($vhHeight - $headerHeight);
+    @extend %flexCenter;
+  }
+}

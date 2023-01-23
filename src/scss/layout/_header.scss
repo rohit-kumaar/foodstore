@@ -1,15 +1,12 @@
 header {
-  position: sticky;
-  z-index: 100;
-  top: 0;
-  box-shadow: 0 0 rem(10) rgba($black, 0.23);
+  box-shadow: 0 0 10px rgba($black, 0.23);
   nav {
-    height: 5rem;
     @extend %flexBetween;
+    height: 80px;
     background-color: $white;
 
     @include tablet {
-      padding: 2rem;
+      padding: 32px;
     }
 
     > div {
@@ -17,16 +14,16 @@ header {
 
       > svg {
         color: $primary;
-        font-size: 3rem;
+        font-size: 48px;
       }
 
       > a {
-        margin: 0 0.5rem;
+        margin: 0 8px;
         color: $dark;
         transition: color 0.3s;
 
         @include tablet {
-          margin: 0 2rem;
+          margin: 0 32px;
         }
 
         &:hover {
@@ -36,7 +33,7 @@ header {
         > svg {
           color: $primary;
           transform: inherit;
-          font-size: 1.5rem;
+          font-size: rem(24);
 
           &:hover {
             color: $lightdark;
