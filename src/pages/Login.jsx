@@ -10,7 +10,7 @@ function Login() {
 
   return (
     <>
-      <Header />
+      <Header isAuthenticated={true} />
 
       <main className="login">
         <section className="container">

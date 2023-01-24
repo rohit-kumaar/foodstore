@@ -8,6 +8,7 @@ import Shipping from "components/Shipping";
 import ConfirmOrder from "pages/ConfirmOrder";
 import PaymentSuccess from "pages/PaymentSuccess";
 import Login from "pages/Login";
+import Profile from "pages/Profile";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
   },
 ]);
 
