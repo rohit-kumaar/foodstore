@@ -38,38 +38,45 @@ function Profile() {
               Rohit Kumar
             </motion.h5>
 
-            <motion.div {...animation} transition={{ delay: 0.5 }}>
-              <Link to="/admin/dashboard">Dashboard</Link>
-            </motion.div>
+            <div>
+              <motion.div {...animation} transition={{ delay: 0.5 }}>
+                <Link to="/admin/dashboard" className="btn">
+                  Dashboard
+                </Link>
+              </motion.div>
 
-            <motion.div
-              initial={{
-                x: "-100vw",
-                opacity: 0,
-              }}
-              animate={{
-                x: 0,
-                opacity: 1,
-              }}
-            >
-              <Link to="/my-orders">Orders</Link>
-            </motion.div>
+              <motion.div
+                initial={{
+                  x: "-100vw",
+                  opacity: 0,
+                }}
+                animate={{
+                  x: 0,
+                  opacity: 1,
+                }}
+              >
+                <Link to="/my-orders" className="btn">
+                  Orders
+                </Link>
+              </motion.div>
 
-            <motion.button
-              initial={{
-                x: "-100vw",
-                opacity: 0,
-              }}
-              animate={{
-                x: 0,
-                opacity: 1,
-              }}
-              transition={{
-                delay: 0.3,
-              }}
-            >
-              Logout
-            </motion.button>
+              <motion.button
+                initial={{
+                  x: "-100vw",
+                  opacity: 0,
+                }}
+                animate={{
+                  x: 0,
+                  opacity: 1,
+                }}
+                transition={{
+                  delay: 0.3,
+                }}
+                className="btn"
+              >
+                Logout
+              </motion.button>
+            </div>
           </section>
         </div>
       </main>

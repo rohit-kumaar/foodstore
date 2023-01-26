@@ -83,12 +83,14 @@ function Contact() {
                     type="email"
                     label="Email"
                     name="email"
+                    placeholder="Enter your email"
                   />
 
                   <FormikControl
                     control="textarea"
                     label="Description"
                     name="description"
+                    placeholder="Enter description"
                   />
 
                   <FormikControl

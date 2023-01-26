@@ -1,0 +1,30 @@
+.profile {
+  > .container {
+    @extend %flexCenter;
+    margin-block: 60px;
+  }
+
+  > &__content {
+    @extend %flexCenter;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: $box-shadow;
+
+    @include mobile {
+      width: 60%;
+      padding: 30px;
+    }
+
+    @include laptop {
+      width: 35%;
+    }
+
+    > div {
+      @extend %flexBetween;
+      width: 100%;
+    }
+  }
+}
