@@ -2,9 +2,8 @@
   padding-block: 30px;
 
   &-total {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
+    @extend %flexColumn;
+    align-items: flex-end;
     padding-block: 30px;
 
     > a {

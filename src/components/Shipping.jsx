@@ -6,7 +6,6 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import FormikControl from "components/form/FormikControl";
 import { Country, State } from "country-state-city";
-import { Link } from "react-router-dom";
 
 function Shipping() {
   useTitle("FoodStore | Shipping");
@@ -41,7 +40,6 @@ function Shipping() {
     city: Yup.string().required("Required"),
     // countryOption: Yup.string().required("Required"),
     stateOption: Yup.string().required("Required"),
-    pinCode: Yup.number().required("Required"),
     pinCode: Yup.number().required("Required"),
     phoneNumber: Yup.number().required("Required"),
   });
