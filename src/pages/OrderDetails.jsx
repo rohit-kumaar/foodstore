@@ -1,8 +1,11 @@
+import { useTitle } from "hooks/useTitle";
 import Footer from "layouts/Footer";
 import Header from "layouts/Header";
 import React from "react";
 
 function OrderDetails() {
+  useTitle("FoodStore | Order Details");
+
   return (
     <>
       <Header />
