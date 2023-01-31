@@ -2,7 +2,7 @@
 .shipping,
 .confirm-order {
   width: 100%;
-  height: calc($vhHeight - $headerHeight);
+  height: heroHeight;
   background: $primary;
   margin-block: 30px;
 

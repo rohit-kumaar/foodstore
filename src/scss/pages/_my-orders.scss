@@ -1,0 +1,43 @@
+.my-orders {
+  height: $heroHeight;
+  &__table {
+    margin-block: 30px;
+
+    > table {
+      text-align: center;
+
+      > caption {
+        > h1 {
+          margin-bottom: 30px;
+        }
+      }
+
+      > thead {
+        border: 0;
+        > tr {
+          > th {
+            &:first-child {
+              border-top-left-radius: 12px;
+            }
+            &:last-child {
+              border-top-right-radius: 12px;
+            }
+          }
+        }
+      }
+
+      > tbody {
+        > tr {
+          > td {
+            > a {
+              > svg {
+                color: $primary;
+                font-size: rem(24);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

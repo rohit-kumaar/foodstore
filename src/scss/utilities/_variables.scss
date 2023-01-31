@@ -21,6 +21,7 @@ $box-shadow: 20px 20px 60px hsl(0, 0%, 85%), -20px -20px 60px $white;
 /* ------------------- */
 $vhHeight: 100vh;
 $headerHeight: 80px;
+$heroHeight: calc($vhHeight - $headerHeight);
 
 /* ------------------- */
 /* Image Path          */

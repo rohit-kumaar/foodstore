@@ -9,6 +9,7 @@ import ConfirmOrder from "pages/ConfirmOrder";
 import PaymentSuccess from "pages/PaymentSuccess";
 import Login from "pages/Login";
 import Profile from "pages/Profile";
+import MyOrders from "pages/MyOrders";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: <Profile />,
+  },
+  {
+    path: "/my-orders",
+    element: <MyOrders />,
   },
 ]);
 
