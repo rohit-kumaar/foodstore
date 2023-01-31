@@ -38,7 +38,7 @@ function MyOrders() {
                   <td>₹ 2391</td>
                   <td>COD</td>
                   <td>
-                    <Link to="#">
+                    <Link to="/order-details">
                       <AiOutlineEye />
                     </Link>
                   </td>
