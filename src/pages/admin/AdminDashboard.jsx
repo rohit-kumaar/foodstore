@@ -4,6 +4,7 @@ import React from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import { useTitle } from "hooks/useTitle";
+import { Link } from "react-router-dom";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -61,8 +62,12 @@ function AdminDashboard() {
           <div className="container">
             <article>
               <div>
-                <button className="btn">View Orders</button>
-                <button className="btn">View Users</button>
+                <Link to="/admin/orders" className="btn">
+                  View Orders
+                </Link>
+                <Link to="/admin/users" className="btn">
+                  View Users
+                </Link>
               </div>
 
               <div>

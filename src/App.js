@@ -12,6 +12,7 @@ import Profile from "pages/Profile";
 import MyOrders from "pages/MyOrders";
 import OrderDetails from "pages/OrderDetails";
 import AdminDashboard from "pages/admin/AdminDashboard";
+import Users from "pages/admin/Users";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
   {
     path: "/admin/dashboard",
     element: <AdminDashboard />,
+  },
+  {
+    path: "/admin/users",
+    element: <Users />,
   },
 ]);
 
