@@ -1,5 +1,51 @@
 .order-details {
-  &__detail {
-    height: $heroHeight;
+  @extend %flexCenter;
+  height: $heroHeight;
+  width: 100%;
+  margin: 0;
+  background-image: url(#{$images-path}/order-detail-bg-laptop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: hsl(225, 100%, 96%);
+
+  .card {
+    width: 100%;
+    margin-inline: 12px;
+
+    @include media-breakpoint-up(md) {
+      width: 500px;
+    }
+
+    &-header {
+      text-align: center;
+    }
+
+    &-body {
+      display: flex;
+      > ul {
+        list-style: none;
+
+        &:first-child {
+          width: 30%;
+          > li {
+            text-transform: uppercase;
+            font-weight: 700;
+          }
+        }
+
+        &:last-child {
+          width: 70%;
+
+          > li {
+            > div {
+              font-weight: 700;
+              > span {
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -45,8 +45,7 @@
       }
 
       > p {
-        font-size: rem(14);
-        font-family: cursive;
+        font: rem(14) cursive;
         letter-spacing: 3px;
         line-height: 200%;
       }

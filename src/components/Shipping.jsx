@@ -1,11 +1,10 @@
+import FormikControl from "components/form/FormikControl";
+import { Country, State } from "country-state-city";
+import { Form, Formik } from "formik";
 import { useTitle } from "hooks/useTitle";
 import Footer from "layouts/Footer";
 import Header from "layouts/Header";
-import React from "react";
-import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import FormikControl from "components/form/FormikControl";
-import { Country, State } from "country-state-city";
 
 function Shipping() {
   useTitle("FoodStore | Shipping");
