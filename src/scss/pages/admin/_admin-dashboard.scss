@@ -1,0 +1,62 @@
+$AdminDashboard: ".admin-dashboard";
+
+.admin-dashboard {
+  // height: $heroHeight;
+
+  > &__details {
+    > section {
+      @extend %alignCenter;
+      justify-content: space-evenly;
+      min-height: 150px;
+      background-color: $primary;
+
+      > div {
+        @extend %flexCenter;
+        flex-direction: column;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: $white;
+      }
+    }
+
+    > .container {
+      > article {
+        display: flex;
+        flex-direction: column;
+        padding-block: 30px;
+
+        @include media-breakpoint-up(lg) {
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+        }
+
+        > div {
+          @include media-breakpoint-up(lg) {
+            width: 35.2%;
+          }
+
+          &:first-child {
+            @extend %flexCenter;
+            gap: 20px;
+            order: 2;
+
+            @include media-breakpoint-up(lg) {
+              flex-direction: column;
+              order: 0;
+            }
+          }
+
+          &:last-child {
+            margin-bottom: 30px;
+
+            @include media-breakpoint-up(lg) {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
