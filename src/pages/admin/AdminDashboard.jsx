@@ -5,8 +5,11 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import { useTitle } from "hooks/useTitle";
 import { Link } from "react-router-dom";
+import Loader from "layouts/Loader";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
+
+const loading = false;
 
 const data = {
   labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
@@ -42,41 +45,45 @@ function AdminDashboard() {
     <>
       <Header />
 
-      <main className="admin-dashboard">
-        <div className="admin-dashboard__details">
-          <section>
-            <div>
-              <h4>232</h4>
-              <b>User</b>
-            </div>
-            <div>
-              <h4>232</h4>
-              <b>Orders</b>
-            </div>
-            <div>
-              <h4>₹ 232</h4>
-              <b>Income</b>
-            </div>
-          </section>
-
-          <div className="container">
-            <article>
+      {loading === false ? (
+        <main className="admin-dashboard">
+          <div className="admin-dashboard__details">
+            <section>
               <div>
-                <Link to="/admin/orders" className="btn">
-                  View Orders
-                </Link>
-                <Link to="/admin/users" className="btn">
-                  View Users
-                </Link>
+                <h4>232</h4>
+                <b>User</b>
               </div>
-
               <div>
-                <Doughnut data={data} />
+                <h4>232</h4>
+                <b>Orders</b>
               </div>
-            </article>
+              <div>
+                <h4>₹ 232</h4>
+                <b>Income</b>
+              </div>
+            </section>
+
+            <div className="container">
+              <article>
+                <div>
+                  <Link to="/admin/orders" className="btn">
+                    View Orders
+                  </Link>
+                  <Link to="/admin/users" className="btn">
+                    View Users
+                  </Link>
+                </div>
+
+                <div>
+                  <Doughnut data={data} />
+                </div>
+              </article>
+            </div>
           </div>
-        </div>
-      </main>
+        </main>
+      ) : (
+        <Loader />
+      )}
 
       <Footer />
     </>
