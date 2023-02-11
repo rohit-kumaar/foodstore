@@ -1,0 +1,19 @@
+.not-found {
+  @extend %flexCenter;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+
+  > div {
+    @extend %alignCenter;
+    gap: 10px;
+
+    > svg{
+        font-size: rem(35);
+    }
+  }
+
+  > p {
+    margin-block: 10px;
+  }
+}

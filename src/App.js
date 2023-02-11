@@ -15,6 +15,7 @@ import AdminDashboard from "pages/admin/AdminDashboard";
 import Users from "pages/admin/Users";
 import Orders from "pages/admin/Orders";
 import About from "pages/About";
+import NotFound from "layouts/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -72,6 +73,10 @@ const router = createBrowserRouter([
   {
     path: "/admin/orders",
     element: <Orders />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 
