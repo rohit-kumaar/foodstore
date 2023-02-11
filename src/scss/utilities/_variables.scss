@@ -8,12 +8,12 @@ $ff-roboto: "Roboto", sans-serif;
 /* ------------------- */
 $black: hsl(0, 0%, 0%);
 $white: hsl(0, 0%, 100%);
-$slate: #e2e8f0;
+$slate: hsl(214, 32%, 91%);
 // $primary: #0000a1;
 $primary: hsl(337, 100%, 31%);
-$secondary: rgb(126, 0, 48);
-$dark: rgb(33, 33, 33);
-$lightdark: rgba(33, 33, 33, 0.711);
+$secondary: hsl(337, 100%, 25%);
+$dark: hsl(0, 0%, 13%);
+$lightdark: hsla(0, 0%, 13%, 0.711);
 $pink: rgb(255, 239, 239);
 $box-shadow: 20px 20px 60px hsl(0, 0%, 85%), -20px -20px 60px $white;
 
