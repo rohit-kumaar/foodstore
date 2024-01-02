@@ -1,4 +1,7 @@
 header {
+  z-index: 10;
+  position: sticky;
+  top: 0;
   box-shadow: 0 0 10px rgba($black, 0.23);
   nav {
     @extend %flexBetween;
