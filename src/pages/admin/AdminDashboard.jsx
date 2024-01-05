@@ -1,11 +1,11 @@
+import { ArcElement, Chart as ChartJS, Legend, Tooltip } from "chart.js";
+import { useTitle } from "hooks/useTitle";
 import Footer from "layouts/Footer";
 import Header from "layouts/Header";
-import React from "react";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
-import { useTitle } from "hooks/useTitle";
-import { Link } from "react-router-dom";
 import Loader from "layouts/Loader";
+import { Doughnut } from "react-chartjs-2";
+import { Link } from "react-router-dom";
+import { ROUTE_PATH } from "routes/routePath";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -66,10 +66,10 @@ function AdminDashboard() {
             <div className="container">
               <article>
                 <div>
-                  <Link to="/admin/orders" className="btn">
+                  <Link to={`${ROUTE_PATH.adminOrders}`} className="btn">
                     View Orders
                   </Link>
-                  <Link to="/admin/users" className="btn">
+                  <Link to={`${ROUTE_PATH.adminUsers}`} className="btn">
                     View Users
                   </Link>
                 </div>

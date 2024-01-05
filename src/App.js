@@ -16,66 +16,67 @@ import Users from "pages/admin/Users";
 import Orders from "pages/admin/Orders";
 import About from "pages/About";
 import NotFound from "layouts/NotFound";
+import { ROUTE_PATH } from "routes/routePath";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: ROUTE_PATH.default,
     element: <LandingPage />,
   },
   {
-    path: "/contact",
+    path: ROUTE_PATH.contact,
     element: <Contact />,
   },
   {
-    path: "/about",
+    path: ROUTE_PATH.about,
     element: <About />,
   },
   {
-    path: "/cart",
+    path: ROUTE_PATH.cart,
     element: <Cart />,
   },
   {
-    path: "/shipping",
+    path: ROUTE_PATH.shipping,
     element: <Shipping />,
   },
   {
-    path: "/confirm-order",
+    path: ROUTE_PATH.confirmOrder,
     element: <ConfirmOrder />,
   },
   {
-    path: "/payment-success",
+    path: ROUTE_PATH.paymentSuccess,
     element: <PaymentSuccess />,
   },
   {
-    path: "/login",
+    path: ROUTE_PATH.login,
     element: <Login />,
   },
   {
-    path: "/profile",
+    path: ROUTE_PATH.profile,
     element: <Profile />,
   },
   {
-    path: "/my-orders",
+    path: ROUTE_PATH.myOrders,
     element: <MyOrders />,
   },
   {
-    path: "/order-details",
+    path: ROUTE_PATH.orderDetails,
     element: <OrderDetails />,
   },
   {
-    path: "/admin/dashboard",
+    path: ROUTE_PATH.adminDashboard,
     element: <AdminDashboard />,
   },
   {
-    path: "/admin/users",
+    path: ROUTE_PATH.adminUsers,
     element: <Users />,
   },
   {
-    path: "/admin/orders",
+    path: ROUTE_PATH.adminUsers,
     element: <Orders />,
   },
   {
-    path: "*",
+    path: ROUTE_PATH.notFount,
     element: <NotFound />,
   },
 ]);

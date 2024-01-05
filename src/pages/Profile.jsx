@@ -1,10 +1,10 @@
-import Footer from "layouts/Footer";
-import Header from "layouts/Header";
-import React from "react";
 import me from "assets/rohit.jpeg";
 import { motion } from "framer-motion";
 import { useTitle } from "hooks/useTitle";
+import Footer from "layouts/Footer";
+import Header from "layouts/Header";
 import { Link } from "react-router-dom";
+import { ROUTE_PATH } from "routes/routePath";
 
 function Profile() {
   useTitle("FoodStore | Profile");
@@ -40,7 +40,7 @@ function Profile() {
 
             <div>
               <motion.div {...animation} transition={{ delay: 0.5 }}>
-                <Link to="/admin/dashboard" className="btn">
+                <Link to={`${ROUTE_PATH.adminDashboard}`} className="btn">
                   Dashboard
                 </Link>
               </motion.div>
@@ -55,7 +55,7 @@ function Profile() {
                   opacity: 1,
                 }}
               >
-                <Link to="/my-orders" className="btn">
+                <Link to={`${ROUTE_PATH.myOrders}`} className="btn">
                   Orders
                 </Link>
               </motion.div>

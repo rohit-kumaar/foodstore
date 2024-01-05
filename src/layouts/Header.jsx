@@ -5,6 +5,7 @@ import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { animation } from "components/ui/animation";
+import { ROUTE_PATH } from "routes/routePath";
 
 function Header({ isAuthenticated = false }) {
   return (
@@ -15,14 +16,18 @@ function Header({ isAuthenticated = false }) {
         </motion.div>
 
         <div>
-          <Link to="/">Home</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/about">About</Link>
-          <Link to="/cart">
+          <Link to={`${ROUTE_PATH.default}`}>Home</Link>
+          <Link to={`${ROUTE_PATH.contact}`}>Contact</Link>
+          <Link to={`${ROUTE_PATH.about}`}>About</Link>
+          <Link to={`${ROUTE_PATH.cart}`}>
             <FiShoppingCart />
           </Link>
 
-          <Link to={isAuthenticated ? "/profile" : "/login"}>
+          <Link
+            to={
+              isAuthenticated ? `${ROUTE_PATH.profile}` : `${ROUTE_PATH.login}`
+            }
+          >
             {isAuthenticated ? <FaUser /> : <FiLogIn />}
           </Link>
         </div>

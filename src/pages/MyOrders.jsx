@@ -1,9 +1,9 @@
 import { useTitle } from "hooks/useTitle";
 import Footer from "layouts/Footer";
 import Header from "layouts/Header";
-import React from "react";
 import { AiOutlineEye } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { ROUTE_PATH } from "routes/routePath";
 
 function MyOrders() {
   useTitle("FoodStore | My Order");
@@ -38,7 +38,7 @@ function MyOrders() {
                   <td>₹ 2391</td>
                   <td>COD</td>
                   <td>
-                    <Link to="/order-details">
+                    <Link to={`${ROUTE_PATH.orderDetails}`}>
                       <AiOutlineEye />
                     </Link>
                   </td>

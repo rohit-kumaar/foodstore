@@ -6,4 +6,4 @@ const store = configureStore({
 
 export default store;
 
-export const server = `https://foodstore-backend.onrender.com`;
+export const server = `http://localhost:4000`;

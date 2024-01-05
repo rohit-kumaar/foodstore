@@ -3,6 +3,7 @@ import Footer from "layouts/Footer";
 import Header from "layouts/Header";
 import { AiOutlineEye } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { ROUTE_PATH } from "routes/routePath";
 
 function Orders() {
   useTitle("FoodStore | Orders");
@@ -39,7 +40,7 @@ function Orders() {
                   <td>COD</td>
                   <td>Rohit Kumar</td>
                   <td>
-                    <Link to="/order-details">
+                    <Link to={`${ROUTE_PATH.orderDetails}`}>
                       <AiOutlineEye />
                     </Link>
                   </td>

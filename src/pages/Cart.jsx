@@ -5,6 +5,7 @@ import Header from "layouts/Header";
 import React from "react";
 import { Link } from "react-router-dom";
 import food1 from "../assets/food1.jpg";
+import { ROUTE_PATH } from "routes/routePath";
 
 function Cart() {
   useTitle("FoodStore | Cart");
@@ -48,7 +49,9 @@ function Cart() {
             <span>₹ {7000}</span>
           </div>
 
-          <Link to="/shipping" className="btn">Checkout</Link>
+          <Link to={`${ROUTE_PATH.shipping}`} className="btn">
+            Checkout
+          </Link>
         </section>
       </div>
       <Footer />
