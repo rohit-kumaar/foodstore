@@ -7,11 +7,11 @@ export const ROUTE_PATH = {
   confirmOrder: "/confirm-order",
   paymentSuccess: "/payment-success",
   login: "/login",
-  profile: "/profile",
+  profile: "/me",
   myOrders: "/my-orders",
   orderDetails: "/order-details",
   adminDashboard: "/admin/dashboard",
   adminUsers: "/admin/users",
   adminOrders: "/admin/orders",
-  notFount: "*",
+  notFound: "*",
 };

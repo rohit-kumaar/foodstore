@@ -1,22 +1,22 @@
 // import "../node_modules/bootstrap/scss/bootstrap.scss";
-import "./App.scss";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import LandingPage from "pages/LandingPage";
-import Contact from "pages/Contact";
-import Cart from "pages/Cart";
 import Shipping from "components/Shipping";
+import NotFound from "layouts/NotFound";
+import About from "pages/About";
+import Cart from "pages/Cart";
 import ConfirmOrder from "pages/ConfirmOrder";
-import PaymentSuccess from "pages/PaymentSuccess";
+import Contact from "pages/Contact";
+import LandingPage from "pages/LandingPage";
 import Login from "pages/Login";
-import Profile from "pages/Profile";
 import MyOrders from "pages/MyOrders";
 import OrderDetails from "pages/OrderDetails";
+import PaymentSuccess from "pages/PaymentSuccess";
+import Profile from "pages/Profile";
 import AdminDashboard from "pages/admin/AdminDashboard";
-import Users from "pages/admin/Users";
 import Orders from "pages/admin/Orders";
-import About from "pages/About";
-import NotFound from "layouts/NotFound";
+import Users from "pages/admin/Users";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { ROUTE_PATH } from "routes/routePath";
+import "./App.scss";
 
 const router = createBrowserRouter([
   {
@@ -76,7 +76,7 @@ const router = createBrowserRouter([
     element: <Orders />,
   },
   {
-    path: ROUTE_PATH.notFount,
+    path: ROUTE_PATH.notFound,
     element: <NotFound />,
   },
 ]);

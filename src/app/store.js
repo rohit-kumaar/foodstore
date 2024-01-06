@@ -1,9 +1,10 @@
-const { configureStore } = require("@reduxjs/toolkit");
+import { configureStore } from "@reduxjs/toolkit";
+import { authReducer } from "redux/reducers/userReducer";
 
 const store = configureStore({
-  reducer: {},
+  reducer: {
+    auth: authReducer,
+  },
 });
 
 export default store;
-
-export const server = `http://localhost:4000`;

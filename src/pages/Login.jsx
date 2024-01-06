@@ -1,3 +1,4 @@
+import { server } from "config";
 import { motion } from "framer-motion";
 import { useTitle } from "hooks/useTitle";
 import Footer from "layouts/Footer";
@@ -7,6 +8,10 @@ import { FcGoogle } from "react-icons/fc";
 
 function Login() {
   useTitle("FoodStore | Login");
+
+  const loginHandler = () => {
+    window.open(`${server}/googlelogin`, "_self");
+  };
 
   return (
     <>
@@ -19,6 +24,7 @@ function Login() {
               initial={{ y: "-100vh" }}
               animate={{ y: 0 }}
               className="btn"
+              onClick={loginHandler}
             >
               Login with Google <FcGoogle />
             </motion.button>
